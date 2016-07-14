@@ -1,0 +1,10 @@
+/* Insert CSS here */
+.preview-box {
+  background-color: yellow;
+}
+
+.access-key-id {
+  font-family: monospace;
+  font-weight: bold;
+  font-size: large;
+}

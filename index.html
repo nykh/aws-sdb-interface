@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Amazon SimpleDB Interface</title>
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.css">
+    <link rel="stylesheet" href="css/master.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div ng-app="myApp" ng-controller="rootCtrl" layout="column" class="layout-margin">
+      <div layout="row">
+        <img src="image/sumologo.png" alt="Sumo Logic" />
+        <h1>SimpleDB Interface</h1>
+      </div>
+      <div ng-controller="navCtrl" ng-show="$parent.logged_in">
+        Using Access Key ID: <span class="access-key-id">{{ login.accessKeyId }}</span>
+        <form>
+          <label for="opearation">Operation</label>
+          <select name="operation" ng-model="operation" ng-change="go(operation)" >
+            <option value="createDomain">Create Domain</option>
+            <option value="listDomains">List Domains</option>
+            <option value="domainData">Domain MetaData</option>
+            <option value="deleteDomain">Delete Domain</option>
+            <option value="putAttributes">Put Attributes</option>
+            <option value="batchPutAttributes">Batch Put Attributes</option>
+            <option value="getAttributes">Get Attributes</option>
+            <option value="deleteAttributes">Delete Attributes</option>
+            <option value="select">Select</option>
+          </select>
+        </form>
+      </div>
+      <div ng-view=""></div>
+      <footer>
+        <img src="image/poweredbyaws.png" width="100px" alt="Powered by AWS" />
+      </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-cookies.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc2/angular-material.min.js"></script>
+
+    <!-- Codes imported from AWS -->
+    <script src="app/aws-js/awssigner.js"></script>
+    <script src="app/aws-js/hmacsha1.js"></script>
+    <script src="app/aws-js/scratchpad.js"></script>
+
+    <script src="app/app.js"></script>
+    <script src="app/controllers.js"></script>
+  </body>
+</html>

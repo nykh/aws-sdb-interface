@@ -1,0 +1,26 @@
+<h1 class="md-title">List Domains</h1>
+
+<md-content layout-padding>
+  <div>
+    <form>
+      <div layout="row" layout-padding>
+        <md-input-container>
+          <label>Max Number of Domains</label>
+          <input type="text" ng-model="list.MaxNumberOfDomains">
+        </md-input-container>
+        <md-input-container>
+          <label>Next Token</label>
+          <input type="text" ng-model="list.NextToken">
+        </md-input-container>
+      </div>
+      <div layout="row">
+        <md-button type="submit" ng-click="invoke(list)"]>Invoke Request</md-button>
+        <md-button type="button" ng-click="displayUrl(list)">Display Signed URL</md-button>
+        <md-button type="reset" ng-click="reset()">Reset</md-button>
+      </div>
+      <div layout="row" layout-padding ng-hide="preview.length == 0">
+        <div class="preview-box">{{ preview }}</div>
+      </div>
+    </form>
+  </div>
+</md-content>

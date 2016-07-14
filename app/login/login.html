@@ -1,0 +1,22 @@
+<h1>Login</h1>
+
+<md-content>
+  <div>
+    <form>
+      <div layout="column" layout-padding>
+        <md-input-container>
+          <label>Access Key ID</label>
+          <input type="text" ng-model="login.accessKeyId">
+        </md-input-container>
+        <md-input-container>
+          <label>Secret Key</label>
+          <input type="password" ng-model="login.secretKey">
+        </md-input-container>
+      </div>
+      <div layout="row">
+        <md-button type="submit" ng-click="login()"]>Log in</md-button>
+      </div>
+    </form>
+  </div>
+
+</md-content>
