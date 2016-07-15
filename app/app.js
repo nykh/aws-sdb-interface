@@ -71,9 +71,16 @@ app.controller('LoginController', function($scope, $rootScope, $location) {
   }
 });
 
-app.controller('navCtrl', function ($location, $scope) {
+app.controller('navCtrl', function ($location, $rootScope, $scope) {
   $scope.currentPage = "home";
   $scope.go = function (page) {
     $location.path('/' + page);
+  };
+
+  $scope.logout = function () {
+    $scope.login.accessKeyId = '';
+    $scope.login.secretKey = '';
+    $rootScope.logged_in = false;
+    $location.path('/login');
   };
 });

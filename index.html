@@ -14,6 +14,7 @@
       </div>
       <div ng-controller="navCtrl" ng-show="$parent.logged_in">
         Using Access Key ID: <span class="access-key-id">{{ login.accessKeyId }}</span>
+        <md-button ng-click="logout()">Logout</md-button>
         <form>
           <label for="opearation">Operation</label>
           <select name="operation" ng-model="operation" ng-change="go(operation)" >
