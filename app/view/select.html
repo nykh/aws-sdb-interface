@@ -1,0 +1,41 @@
+<h1 class="md-title">Select</h1>
+
+<md-content layout-padding>
+  <div>
+    <form ng-controller="SelectController">
+      <div layout="column" layout-padding>
+        <div layout="row">
+          <label>Select</label>
+          <md-input-container>
+            <label>Target</label>
+            <input type="text" ng-model="sel.target">
+          </md-input-container>
+          <label>from</label>
+          <md-input-container>
+            <label>Item Name</label>
+            <input type="text" ng-model="sel.item" required="">
+          </md-input-container>
+        </div>
+        <div layout="row">
+          <label>where</label>
+          <md-input-container>
+            <label>Filter</label>
+            <input type="text" ng-model="sel.filter">
+          </md-input-container>
+        </div>
+      </div>
+      <div layout="column" layout-padding>
+        <h2>Select Expression</h2>
+        <div class="preview-box">{{ select_expression }}</div>
+      </div>
+      <div layout="row">
+        <md-button type="submit" ng-click="invoke(select_expression)"]>Invoke Request</md-button>
+        <md-button type="button" ng-click="displayUrl(select_expression)">Display Signed URL</md-button>
+        <md-button type="reset" ng-click="reset()">Reset</md-button>
+      </div>
+      <div layout="row" layout-padding ng-hide="preview.length == 0">
+        <div class="preview-box">{{ preview }}</div>
+      </div>
+    </form>
+  </div>
+</md-content>

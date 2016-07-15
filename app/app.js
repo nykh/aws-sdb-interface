@@ -3,7 +3,6 @@ var app = angular.module("myApp", ['ngRoute', 'ngMaterial', 'ngCookies']);
 app.run(function($rootScope, $location) {
   $rootScope.$on('$routeChangeStart', function () {
     if (!$rootScope.logged_in) {
-      console.log('Not Logged In');
       $location.path('/login');
     }
   });
@@ -52,7 +51,7 @@ app.config(function($routeProvider){
             controller: 'DeleteAttributesController'
         })
         .when('/select', {
-            templateUrl: "app/view/NotImplemented.html",
+            templateUrl: "app/view/select.html",
             controller: 'SelectController'
         })
         .otherwise({ redirectTo: '/' });

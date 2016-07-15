@@ -3,14 +3,14 @@
 <md-content layout-padding>
   <div>
     <form>
-      <div layout="row" layout-padding>
+      <div layout="column" layout-padding>
         <md-input-container>
           <label>Domain Name</label>
-          <input type="text" ng-model="attr.DomainName">
+          <input type="text" ng-model="attr.DomainName" required="">
         </md-input-container>
         <md-input-container>
           <label>Item Name</label>
-          <input type="text" ng-model="attr.ItemName">
+          <input type="text" ng-model="attr.ItemName" required="">
         </md-input-container>
       </div>
       <div layout="row">
