@@ -57,15 +57,11 @@ app.config(function($routeProvider){
         .otherwise({ redirectTo: '/' });
 });
 
-app.controller('rootCtrl', function($scope) {
-  $scope.login = {}
-});
+app.controller('rootCtrl', function($scope) {});
 
 app.controller('LoginController', function($scope, $rootScope, $location) {
-  $scope.login.accessKeyId = 'AKIAIB5FCQ3CTUYRYJOA';
-  $scope.login.secretKey = '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';
-
   $scope.login = function () {
+    $rootScope.login = $scope.login;
     $rootScope.logged_in = true;
     $location.path('/');
   }
