@@ -1,0 +1,22 @@
+<h1 class="md-title">Domain Metadata</h1>
+
+<md-content layout-padding>
+  <div>
+    <form name="domainDataForm">
+      <div layout="column" layout-padding>
+        <md-input-container>
+          <label>Domain Name</label>
+          <input type="text" ng-model="dd.DomainName" ng-required="true">
+        </md-input-container>
+      </div>
+      <div layout="row">
+        <md-button type="submit" ng-click="domainDataForm.$valid && invoke(dd)">Invoke Request</md-button>
+        <md-button type="submit" ng-click="domainDataForm.$valid && displayUrl(dd)">Display Signed URL</md-button>
+        <md-button type="reset" ng-click="reset()">Reset</md-button>
+      </div>
+      <div layout="row" layout-padding ng-hide="preview.length == 0">
+        <div class="preview-box">{{ preview }}</div>
+      </div>
+    </form>
+  </div>
+</md-content>

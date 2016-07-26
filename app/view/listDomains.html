@@ -2,7 +2,7 @@
 
 <md-content layout-padding>
   <div>
-    <form>
+    <form name="listForm">
       <div layout="column" layout-padding>
         <md-input-container>
           <label>Max Number of Domains</label>
@@ -14,8 +14,8 @@
         </md-input-container>
       </div>
       <div layout="row">
-        <md-button type="submit" ng-click="invoke(list)"]>Invoke Request</md-button>
-        <md-button type="button" ng-click="displayUrl(list)">Display Signed URL</md-button>
+        <md-button type="submit" ng-click="invoke(list)">Invoke Request</md-button>
+        <md-button type="submit" ng-click="displayUrl(list)">Display Signed URL</md-button>
         <md-button type="reset" ng-click="reset()">Reset</md-button>
       </div>
       <div layout="row" layout-padding ng-hide="preview.length == 0">

@@ -27,7 +27,7 @@ app.config(function($routeProvider){
             controller: 'ListDomainsController'
         })
         .when('/domainData', {
-            templateUrl: "app/view/NotImplemented.html",
+            templateUrl: "app/view/domainData.html",
             controller: 'DomainDataController'
         })
         .when('/deleteDomain', {
